@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!-- The DOCTYPE element at the start of the HTML tells the browser that the document that it loads up is a HTML. -->
+
+<html lang="en">
+<!-- <html> </html> Tells the browser what is inside the html such as the element below that tells it the language the text on the page(s) needs to be is in English and is written 'en'. -->
+
+<head>
+<!-- The <head> element is where additional information about the page is put in such as the adding external css scripts, external fonts from sites such as Google fonts and the title of the page that will appear on the tab, alongside properties of the size the content can be viewed. -->  
+
+<meta charset="UTF-8">
+<!-- The first <meta> tag tells the browser to reword the code into text that users can read. -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">   
+<!-- The second <meta> tag tells the browser what type of internet explorer the page can supply. -->     
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- The third <meta> tag tells the broswer the measurements of the page so that it doesn't have a bad structure with everything all over the place. -->
+
+<title>Insomnia - Interactive Story</title>
+<!-- The <title> tag shows the title of the HTML document on the broswer tab. -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Julee&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+<link data-require="font-awesome@*" data-semver="4.5.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" />
+<!-- The <link> element is used here to link (as the name suggests) stylesheets from other external sources such as webpages to be used on this page, and this one is using fonts from Google fonts. -->   
+
+<script data-require="jquery@*" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+<!-- jquerry is added to the HTML via the script element and is added by the 'src' which locates the webpage javascript link, and this allows the browser to enable animations to occur on the page. -->
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- The css for this page is in an external stylesheet and is linked to this HTML via the <link> element and identified via the href locating the css file and finding the css stylesheet within the folder and the broswer adds it to this HTML to make the basic HTML have a better structure for the text and images. --> 
+
+</head>
+<!-- The </head> tells the browser that the <head> element has come to an end. -->
+  
+<body>
+<!-- The <body> element tells the browser what needs to be shown on the page, which in this case will be text and images. -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>    
+
+<div class="topbar">
+<!-- The <div> element is used to group content placed within the <div> into one container.
+  The class is used to give the <div> it's unique name so that it can be structured/ layed out better using css. -->  
+<p>
+<!-- The <p> element tells the broswer that what comes after this is a paragraph and is used to have text shown. -->  
+
+<a class="btn success element" id="button"> <i class="fa fa-play fa-lg" aria-hidden="true"></i></a>
+<!-- <a> is an anchor element allows the browser to link another page to this page but instead of going to another page, the element from the other page will be linked to this page which in this case is a button element. 
+  There's class names given so that it can be used in javascript to make there be a pause and play button show on this anchor element, and an id element is given to create the shape of the button over this link. -->
+
+</p>
+<!-- </p> element tells the broswer that this is the end of the paragraph element. -->
+
+<audio id="player" src="aud/nighttime.mp3" preload="auto"></audio>
+<!-- The <audio> element tells the browser that an audio element is placed here, and is located within a file called aud and the audio file is called 'nighttime.mp3' which will be put in this position. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of this container with the class name "topbar". -->
+
+<div class="pop-up pop-up-colour">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<div class="arrow"></div>
+<!-- This <div> element is used to create an arrow, and the arrow is made using javascript under the class name 'arrow'. -->
+You can use this button here to turn background music on and off.
+<button type="button" class="close">
+<!-- The <button> tag identifies to the browser that this is a clickable button. -->
+
+<span aria-hidden="true">&times;</span>
+<!-- The <span> tag is a container for inline elements, in other words create lines and can be edited in css.
+     In this case it is the cross on the blue text box, and is closed right after because it isn't needed anywhere else on the page. -->
+
+</button>
+<!-- The </button> tag tells the browser anything after this closed tag is not a clickable button. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of this <div> container. -->
+
+<div class="box1">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+<h1 class="tag"> Insomnia</h1>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page, there is a class added on to it that till be used in javascript to make the text fade in and out when scrolling down or up the page. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of this <div> container. -->
+
+<div class="box2">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<h2 class="tag"> This is a story based on a true stories from people of all ages around the world. This interactive story will only go over a few of them because there is too many to cover in this story.
+                 This story however will be from the perpective of male who struggles to sleep with insomnia but makes it worser because of his fear of the dark and ghosts which have been a thing he's been scared from since childhood. </h2>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page, there is a class added on to it that till be used in javascript to make the text fade in and out when scrolling down or up the page. -->
+                 
+</div>
+<!-- </div> tells the broswer that this is the end of this <div> container. -->
+
+<div class="box3">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<h3 class="tag time"> 9:30 pm </h3>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page, there is a class added on to it that till be used in javascript to make the text fade in and out when scrolling down or up the page. -->
+
+<img src="img/1.jpg" class="image-fade person tag" alt="person going to bed">
+<!-- The <img> element allows the browser to add images in from external files and this case it is located in a file called img and the file name is given with what type of image it is, which in this case is jpg, also it has been given classes to relocate its position and to be used in javascript to fade in and out on scroll. 
+     An alt name has also been given so there will be text saying what the image is, but would only occur if the broswer doesn't support the image file. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of this <div> container. -->
+
+<div class="box4">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<h4 class="tag time"> 12:15am </h4>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page, there is a class added on to it that till be used in javascript to make the text fade in and out when scrolling down or up the page. -->
+
+<img src="img/2.png" class="image-fade person tag" alt="person waking up from sleep">
+<!-- The <img> element allows the browser to add images in from external files and this case it is located in a file called img and the file name is given with what type of image it is, which in this case is jpg, also it has been given classes to relocate its position and to be used in javascript to fade in and out on scroll. 
+     An alt name has also been given so there will be text saying what the image is, but would only occur if the broswer doesn't support the image file. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of this <div> container. -->
+
+<div class="box5">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<h5 class="tag time"> 1:43am </h5>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page, there is a class added on to it that till be used in javascript to make the text fade in and out when scrolling down or up the page. -->
+
+<img src="img/3.png" class="image-fade person tag" alt="person counting sheep to go to sleep">
+<!-- The <img> element allows the browser to add images in from external files and this case it is located in a file called img and the file name is given with what type of image it is, which in this case is jpg, also it has been given classes to relocate its position and to be used in javascript to fade in and out on scroll. 
+     An alt name has also been given so there will be text saying what the image is, but would only occur if the broswer doesn't support the image file. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of this <div> container. -->
+
+<div class="box6">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<h6 class="tag time"> 1:55am </h6>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page, there is a class added on to it that till be used in javascript to make the text fade in and out when scrolling down or up the page. -->
+
+<img src="img/4.png" class="image-fade person tag" alt="person gets frustrated they can't sleep">
+<!-- The <img> element allows the browser to add images in from external files and this case it is located in a file called img and the file name is given with what type of image it is, which in this case is jpg, also it has been given classes to relocate its position and to be used in javascript to fade in and out on scroll. 
+     An alt name has also been given so there will be text saying what the image is, but would only occur if the broswer doesn't support the image file. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of this <div> container. -->
+
+<div class="box7 tag">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<!-- This section here is for the first set of ghosts image that is on top of image 5 but will use css to place it on top of it. -->
+<div class="parent">  
+<!-- The <div> element is used to group content placed within the <div> into one container, and this is the parent container which holds another container within in, which in this case is called a child container.
+  Here this <div> is holding the ghost image which will be it's child <div> and it will be placed above the other image on the page. -->
+  
+<div id="img1">
+<!-- This <div> is the child element to the parent div and it contains the ghost image.-->
+
+<img class="image1" src="img/5.1.png" alt="ghosts1">
+<!-- The <img> element allows the browser to add images into the page and it's given a class so that the image can be modified on the page, for example moving it to the left or right and adjusting it's width and/ or height (size).
+     It's given an alt text that will tell users what the image is supposed to be if they can't see it. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of the second <div> container with the id of "img1" so it doesn't get muddled up with the <div> with the "parent" class. -->
+
+<h7 class="time"> 2:33am </h7>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page, there is a class added on to it that till be used in javascript to make the text fade in and out when scrolling down or up the page. -->
+
+<img src="img/5.png" class="image-fade" alt="person imagining monsters and ghosts">
+<!-- The <img> element allows the browser to add images into the page and it's given a class so that the image can be modified on the page, for example moving it to the left or right and adjusting it's width and/ or height (size).
+     It's given an alt text that will tell users what the image is supposed to be if they can't see it. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of the <div> container with the "parent" class. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of the <div> container with the classes "box7" and "tag" elements. -->
+
+<div class="box8 tag">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<!-- This section here is for the second set of ghosts image that is on top of image 7(6) but will use css to place it on top of it. -->
+<div class="parent"> 
+<!-- The <div> element is used to group content placed within the <div> into one container, and this is the parent container which holds another container within in, which in this case is called a child container.
+  Here this <div> is holding the ghost image which will be it's child <div> and it will be placed above the other image on the page. -->
+
+<div id="img2">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<img class="image2" src="img/7.1.png" alt="ghosts2">
+<!-- The <img> element allows the browser to add images into the page and it's given a class so that the image can be modified on the page, for example moving it to the left or right and adjusting it's width and/ or height (size).
+     It's given an alt text that will tell users what the image is supposed to be if they can't see it. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of the <div> container with the classes "box8" and "tag" elements. -->
+
+<h8 class="time"> 3:20am </h8>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page, there is a class added on to it that till be used in javascript to make the text fade in and out when scrolling down or up the page. -->
+
+<img src="img/7.jpg" class="image-fade person" alt="person 'seeing' ghosts">
+<!-- The <img> element allows the browser to add images in from external files and this case it is located in a file called img and the file name is given with what type of image it is, which in this case is jpg, also it has been given classes to relocate its position and to be used in javascript to fade in and out on scroll. 
+     An alt name has also been given so there will be text saying what the image is, but would only occur if the broswer doesn't support the image file. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of the <div> container with the "parent" class. --> 
+
+</div>
+<!-- </div> tells the broswer that this is the end of this <div> container. -->
+
+<div class="box9 tag">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<h9 class="time"> 7:00am </h9>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page, there is a class added on to it that till be used in javascript to make the text fade in and out when scrolling down or up the page. -->
+
+<img src="img/8.jpg" class="image-fade person tag" alt="person gets woken up by alarm just as they start falling asleep">
+<!-- The <img> element allows the browser to add images in from external files and this case it is located in a file called img and the file name is given with what type of image it is, which in this case is jpg, also it has been given classes to relocate its position and to be used in javascript to fade in and out on scroll. 
+     An alt name has also been given so there will be text saying what the image is, but would only occur if the broswer doesn't support the image file. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of this <div> container. -->    
+
+<div class="box10 tag">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<h10 class="time"> 7:02am </h10>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page, there is a class added on to it that till be used in javascript to make the text fade in and out when scrolling down or up the page. -->
+
+<img src="img/9.jpg" class="image-fade person tag" alt="person rushes to get ready for work">
+<!-- The <img> element allows the browser to add images in from external files and this case it is located in a file called img and the file name is given with what type of image it is, which in this case is jpg, also it has been given classes to relocate its position and to be used in javascript to fade in and out on scroll. 
+     An alt name has also been given so there will be text saying what the image is, but would only occur if the broswer doesn't support the image file. -->
+
+</div> 
+<!-- </div> tells the broswer that this is the end of this <div> container. -->  
+        
+<div class="box10 tag">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+  
+<h1> The End </h1>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page, there is a class added on to it that till be used in javascript to make the text fade in and out when scrolling down or up the page. -->
+
+</div>
+<!-- </div> tells the broswer that this is the end of this <div> container. -->
+
+<div class="box10 tag">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<!-- HTML code for submission form. 
+     Code is from https://www.freecodecamp.org/news/how-to-submit-a-form-with-javascript/#:~:text=To%20submit%20a%20form%20using,if%20any%20data%20is%20submitted). -->
+
+<div class="review-container">
+<!-- The <div> element is used to group content placed within the <div> into one container. -->
+
+<form action="" id="loginForm">
+<!-- A <form> tag is used to tell the browser that this segment of the page will be a form that users can interact with. 
+     It also means that is fully functioning meaning users can put in answers and submit it. -->
+
+<h1 class="review">Write us a review</h1>
+<!-- <h> is used to tell the broswer that the text within <h> and </h> is headings for the page. -->
+
+<input type="text1" id="question1" class="form-control" placeholder="Did you like or dislike the story?">
+<input type="text2" id="question2" class="form-control" placeholder="What other stories should we make?">
+<!-- An <input> tag tells the browser to accept what the users put in the form.
+     Placeholders in this case are questions that are asked to users within the boxes before they type something in as their answer. -->
+
+<!-- HTML code for a star rating review. 
+     Code is from https://nevyan.blogspot.com/2019/12/star-rating-script-javascript-and-css.html -->
+
+<ul class="rating">
+<!-- The <ul> tag shows a list of items that are unordered. -->  
+
+<li class="rating-item" data-rate="1"></li>
+<li class="rating-item active" data-rate="2"></li>
+<li class="rating-item" data-rate="3"></li>
+<li class="rating-item" data-rate="4"></li>
+<li class="rating-item" data-rate="5"></li>
+<!-- The <li> tag is used here to make a list, and they are placed in a <ul> tag which is what has been done here. 
+     The active class is given on 2 stars so that when the browser shows the star rating, it is higlighted with 2/5 as a hint of what the user can choose to rate it and the stars they choose, for example 4 will be highlighted after instead of 2.
+    'Data-rate' is the set property for each star rating. -->
+
+</ul>
+<!-- </ul> closes the <ul> tag telling the browser to not run it anymore than once, as it is only written in the code once. -->
+
+<button type="submit">Submit</button>
+<!-- The <button> tag identifies to the browser that this is a clickable button, and is closed right after with the </button> tag. -->
+
+</form>
+<!-- The </form> tag is used to tell the browser the <form> element is finished. -->
+
+</div>
+<!-- The </div> tells the broswer that this is the end of this <div> container. -->
+
+<script src="js/javascript.js"></script>
+<!-- This is the link that will allow the html to be linked with the external javascript file, and it is put here at the end of the body, because if it is put in the head element like the link for the css stylesheet, the javascript style sheet will block out the rest of the elements on the page that come after it such as the above elements in the body section. -->
+
+</body>
+<!-- The </body> ends <body> element telling the broswer that's it for the content on the page. -->
+
+</html>
+<!-- The </html> tag ends what the <html> tag started, and in this case tells the browser that's the end of what it needs to load on the page. --> 
