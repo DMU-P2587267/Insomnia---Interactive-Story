@@ -1,0 +1,1538 @@
+/* Mobile screen page settings for viewing the interactive story. */
+@media screen and (min-width: 390px){
+  .topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+  }
+/* @media screen is used to change the content on the screen of a web page depending on the device width. An example is with this website the content will be bigger on desktop, but smaller on a mobile phone or tablet.
+ So that they don't look completely different, @media screen enables the users to be able to have the right sizes and shapes showing via having different values for the element, so when it goes from a desktop view to mobile view the only thing changing will be the screen size and not the images or text. */    
+  
+  .element{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+/* The element class here has a position of absolute that means that the object it is for will be placed in an exact location and can't be moved unless the top and left margins are changed. */ 
+   
+  .btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+/* Here the play/ pause button has been given a border around it with a white background colour so that people can differentiate it from the play/ pause sign on the button as it has the colour black, also padding has been added which creates space around the border of the elememnt.
+   The cursor has been set to pointer so that when the user hovers over the button the cursor will be pointing on it, telling them that they can click on it, if they didn't know that they are able to (if they didn't read the text in the blue box next to it before closing it). 
+   Font size has been set so that it is visible and not too big nor too small. */
+  
+/* colour for the play/ pause button */
+  .success {
+    border-color: black;
+    color: black;
+  }  
+/* This class gives the colour for the border of the button box and colour for the play/ pause button. */    
+  
+  * {box-sizing: border-box;}
+/* This border-box css element tells the browser that the shape has the same size as another element that has width and height, but has padding and border as an additional bonus.
+ This doesn't interfere with the width and height, so it will be the same as another element on the page with the same height and width values. */    
+  
+  .arrow:before {
+    content: "←";
+    font-size: 25px;
+  }
+/* This is the input for the arrow symbol in the text box, and the size of it has been changed using font-size. */    
+  
+  .pop-up {
+    position: fixed;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: opacity .6s linear;
+    float: left;
+    margin-left: 100px;
+    z-index: 1000;
+  }
+/* Every HTML element with the class name 'pop-up' will have a box with a message in it on the webpage next to the play/pause button telling users what to do with it.
+ Z-index is used to make this message overlay the background colour/ image so it is on top of it and visible.
+ The font of the text is changed with font-family and a selection of fonts are able to be chosen from with the generated ones visual studio code provides the creator with, but with css the styelsheet tells the browser what font type it should use for every HTML element with the class name 'pop-up'.
+ Position: fixed makes it so the element that it is used on can't be moved out of place no matter if a user scrolls up or down the page. */    
+
+  .pop-up-colour {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+  }
+/* The element with the class name 'pop-up-colour' will give the element with the class name 'pop-up' colour, and in this case it is blue, then the borders of the box with be a lighter shade of blue. */    
+  
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: 900;
+    background-color: transparent;
+    border: 0;
+  }
+/* Every element with the class name 'close' will have the element set to position: absolute meaning it will be in the same location unless the top and left values of it are changed.
+ It has a transparent background-color so it blends in with the element it's overlapping.*/    
+  
+  body{
+      margin: 0;
+      padding: 0;
+      background-color: black;
+  }
+/* The body element has no class name so it is not unique and can be written as it is, and it applies throughout the page(s) because it doesn't have a unique class name, nor id name.
+ Here it says there will be no space between the content box or border by setting the margin and padding to 0.
+ The background colour is set to black to set the scene of the story. */
+
+  .box1{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+/* For each of the pages (set with class names from 'box1' to 'box10') on the story there is a set background colour so that when it is scrolled, there won't be a gap of another colour created.
+ The height of the page is set to 100vh meaning vertical height so it shows the content on each pages the same on any device it is viewed on.
+ The width is 100% so it fits the screen width of any device.
+ The background size is set to cover so it covers the whole page instead of a small portion.
+ The display is set to table meaning that the page is like a table laying stuff out like it would be done on an actual table.
+' Background-attachment: fixed' makes the the 'background image' position be still no matter if the user scrolls up or down the page. */    
+  
+  .box2{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+/* For each of the pages (set with class names from 'box1' to 'box10') on the story there is a set background colour so that when it is scrolled, there won't be a gap of another colour created.
+ The height of the page is set to 100vh meaning vertical height so it shows the content on each pages the same on any device it is viewed on.
+ The width is 100% so it fits the screen width of any device.
+ The background size is set to cover so it covers the whole page instead of a small portion.
+ The display is set to table meaning that the page is like a table laying stuff out like it would be done on an actual table.
+ 'Background-attachment: fixed' makes the the 'background image' position be still no matter if the user scrolls up or down the page. */ 
+  
+  .box3{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+/* For each of the pages (set with class names from 'box1' to 'box10') on the story there is a set background colour so that when it is scrolled, there won't be a gap of another colour created.
+ The height of the page is set to 100vh meaning vertical height so it shows the content on each pages the same on any device it is viewed on.
+ The width is 100% so it fits the screen width of any device.
+ The background size is set to cover so it covers the whole page instead of a small portion.
+ The display is set to table meaning that the page is like a table laying stuff out like it would be done on an actual table.
+ 'Background-attachment: fixed' makes the the 'background image' position be still no matter if the user scrolls up or down the page. */ 
+  
+  .box4{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+/* For each of the pages (set with class names from 'box1' to 'box10') on the story there is a set background colour so that when it is scrolled, there won't be a gap of another colour created.
+ The height of the page is set to 100vh meaning vertical height so it shows the content on each pages the same on any device it is viewed on.
+ The width is 100% so it fits the screen width of any device.
+ The background size is set to cover so it covers the whole page instead of a small portion.
+ The display is set to table meaning that the page is like a table laying stuff out like it would be done on an actual table.
+ 'Background-attachment: fixed' makes the the 'background image' position be still no matter if the user scrolls up or down the page. */ 
+  
+  .box5{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+/* For each of the pages (set with class names from 'box1' to 'box10') on the story there is a set background colour so that when it is scrolled, there won't be a gap of another colour created.
+ The height of the page is set to 100vh meaning vertical height so it shows the content on each pages the same on any device it is viewed on.
+ The width is 100% so it fits the screen width of any device.
+ The background size is set to cover so it covers the whole page instead of a small portion.
+ The display is set to table meaning that the page is like a table laying stuff out like it would be done on an actual table.
+ 'Background-attachment: fixed' makes the the 'background image' position be still no matter if the user scrolls up or down the page. */ 
+  
+  .box6{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+/* For each of the pages (set with class names from 'box1' to 'box10') on the story there is a set background colour so that when it is scrolled, there won't be a gap of another colour created.
+ The height of the page is set to 100vh meaning vertical height so it shows the content on each pages the same on any device it is viewed on.
+ The width is 100% so it fits the screen width of any device.
+ The background size is set to cover so it covers the whole page instead of a small portion.
+ The display is set to table meaning that the page is like a table laying stuff out like it would be done on an actual table.
+ 'Background-attachment: fixed' makes the the 'background image' position be still no matter if the user scrolls up or down the page. */ 
+  
+  .box7{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+      position: relative;
+  }
+/* For each of the pages (set with class names from 'box1' to 'box10') on the story there is a set background colour so that when it is scrolled, there won't be a gap of another colour created.
+ The height of the page is set to 100vh meaning vertical height so it shows the content on each pages the same on any device it is viewed on.
+ The width is 100% so it fits the screen width of any device.
+ The background size is set to cover so it covers the whole page instead of a small portion.
+ The display is set to table meaning that the page is like a table laying stuff out like it would be done on an actual table.
+ 'Background-attachment: fixed' makes the the 'background image' position be still no matter if the user scrolls up or down the page. */ 
+  
+  .box8{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+      position: relative;
+  }
+/* For each of the pages (set with class names from 'box1' to 'box10') on the story there is a set background colour so that when it is scrolled, there won't be a gap of another colour created.
+ The height of the page is set to 100vh meaning vertical height so it shows the content on each pages the same on any device it is viewed on.
+ The width is 100% so it fits the screen width of any device.
+ The background size is set to cover so it covers the whole page instead of a small portion.
+ The display is set to table meaning that the page is like a table laying stuff out like it would be done on an actual table.
+ 'Background-attachment: fixed' makes the the 'background image' position be still no matter if the user scrolls up or down the page. */ 
+  
+  .box9{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+/* For each of the pages (set with class names from 'box1' to 'box10') on the story there is a set background colour so that when it is scrolled, there won't be a gap of another colour created.
+ The height of the page is set to 100vh meaning vertical height so it shows the content on each pages the same on any device it is viewed on.
+ The width is 100% so it fits the screen width of any device.
+ The background size is set to cover so it covers the whole page instead of a small portion.
+ The display is set to table meaning that the page is like a table laying stuff out like it would be done on an actual table.
+ 'Background-attachment: fixed' makes the the 'background image' position be still no matter if the user scrolls up or down the page. */ 
+  
+  .box10{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+/* For each of the pages (set with class names from 'box1' to 'box10') on the story there is a set background colour so that when it is scrolled, there won't be a gap of another colour created.
+ The height of the page is set to 100vh meaning vertical height so it shows the content on each pages the same on any device it is viewed on.
+ The width is 100% so it fits the screen width of any device.
+ The background size is set to cover so it covers the whole page instead of a small portion.
+ The display is set to table meaning that the page is like a table laying stuff out like it would be done on an actual table.
+ 'Background-attachment: fixed' makes the the 'background image' position be still no matter if the user scrolls up or down the page. */ 
+  
+  /* heading text font, colour and size settings */
+  h1{
+      font-family: 'Julee', sans-serif;
+      font-size: 100px;
+      color: white;
+      margin: 0;
+      padding: 115px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+/* For each of the headings ('h1' to 'h10') have the font name 'Julee' first because it was taken from an external source from Google fonts that was linked to the HTML document, however if the browser doesn't support the feature to use external sources for fonts, the backup plan is using 'sans-serif'.
+   The margin is set to 0 because by doing so it will allow the <h> element to be placed in the center of the container.
+   To aid the margin to center the <h> element, display of the element has been set to table-cell so it is centered in the middle of a group of cells that are made up on the page.
+   Font size is set to 100px here because it is the title of the story on the first page.
+   Text is aligned to the center of the page via 'text-align:center', but it isn't perfectly in the middle, hence why margin was set to 0, and 'display:table-cell' was used to position it perfectly in the middle.
+   'Vertical-align: middle' so that the <h> element is in the middle of the page vertically. */    
+  
+  h2{
+      font-family: 'Caveat', sans-serif;
+      font-size: 50px;
+      color: white;
+      margin: 0;
+      padding: 180px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+/* For each of the headings ('h1' to 'h10') have the font name 'Caveat' first because it was taken from an external source from Google fonts that was linked to the HTML document, however if the browser doesn't support the feature to use external sources for fonts, the backup plan is using 'sans-serif'.
+   The margin is set to 0 because by doing so it will allow the <h> element to be placed in the center of the container.
+   To aid the margin to center the <h> element, display of the element has been set to table-cell so it is centered in the middle of a group of cells that are made up on the page.
+   Font size is set to 25px here because it was a lot of text and if it was set to 100px, it would take up the whole page and not be clear.
+   Text is aligned to the center of the page via 'text-align:center', but it isn't perfectly in the middle, hence why margin was set to 0, and 'display:table-cell' was used to position it perfectly in the middle.
+   'Vertical-align: middle' so that the <h> element is in the middle of the page vertically. */      
+  
+  h3{
+      font-family: 'Caveat', sans-serif;
+      font-size: 30px;
+      color: white;
+      margin-right: -20px;
+      display: table-cell;
+      vertical-align: middle;
+  }
+/* For each of the headings ('h1' to 'h10') have the font name 'Caveat' first because it was taken from an external source from Google fonts that was linked to the HTML document, however if the browser doesn't support the feature to use external sources for fonts, the backup plan is using 'sans-serif'.
+ The margin is set to 0 because by doing so it will allow the <h> element to be placed in the center of the container.
+ To aid the margin to center the <h> element, display of the element has been set to table-cell so it is centered in the middle of a group of cells that are made up on the page.
+ Font size is set to 25px here because it was a lot of text and if it was set to 100px, it would take up the whole page and not be clear.
+ Text is aligned to the center of the page via 'text-align:center', but it isn't perfectly in the middle, hence why margin was set to 0, and 'display:table-cell' was used to position it perfectly in the middle.
+ 'Vertical-align: middle' so that the <h> element is in the middle of the page vertically. */ 
+  
+  h4{
+      font-family: 'Caveat', sans-serif;
+      font-size: 25px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+/* For each of the headings ('h1' to 'h10') have the font name 'Caveat' first because it was taken from an external source from Google fonts that was linked to the HTML document, however if the browser doesn't support the feature to use external sources for fonts, the backup plan is using 'sans-serif'.
+ The margin is set to 0 because by doing so it will allow the <h> element to be placed in the center of the container.
+ To aid the margin to center the <h> element, display of the element has been set to table-cell so it is centered in the middle of a group of cells that are made up on the page.
+ Font size is set to 25px here because it was a lot of text and if it was set to 100px, it would take up the whole page and not be clear.
+ Text is aligned to the center of the page via 'text-align:center', but it isn't perfectly in the middle, hence why margin was set to 0, and 'display:table-cell' was used to position it perfectly in the middle.
+ 'Vertical-align: middle' so that the <h> element is in the middle of the page vertically. */ 
+  
+  h5{
+      font-family: 'Caveat', sans-serif;
+      font-size: 25px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+/* For each of the headings ('h1' to 'h10') have the font name 'Caveat' first because it was taken from an external source from Google fonts that was linked to the HTML document, however if the browser doesn't support the feature to use external sources for fonts, the backup plan is using 'sans-serif'.
+ The margin is set to 0 because by doing so it will allow the <h> element to be placed in the center of the container.
+ To aid the margin to center the <h> element, display of the element has been set to table-cell so it is centered in the middle of a group of cells that are made up on the page.
+ Font size is set to 25px here because it was a lot of text and if it was set to 100px, it would take up the whole page and not be clear.
+ Text is aligned to the center of the page via 'text-align:center', but it isn't perfectly in the middle, hence why margin was set to 0, and 'display:table-cell' was used to position it perfectly in the middle.
+ 'Vertical-align: middle' so that the <h> element is in the middle of the page vertically. */ 
+  
+  h6{
+      font-family: 'Caveat', sans-serif;
+      font-size: 25px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+/* For each of the headings ('h1' to 'h10') have the font name 'Caveat' first because it was taken from an external source from Google fonts that was linked to the HTML document, however if the browser doesn't support the feature to use external sources for fonts, the backup plan is using 'sans-serif'.
+ The margin is set to 0 because by doing so it will allow the <h> element to be placed in the center of the container.
+ To aid the margin to center the <h> element, display of the element has been set to table-cell so it is centered in the middle of a group of cells that are made up on the page.
+ Font size is set to 25px here because it was a lot of text and if it was set to 100px, it would take up the whole page and not be clear.
+ Text is aligned to the center of the page via 'text-align:center', but it isn't perfectly in the middle, hence why margin was set to 0, and 'display:table-cell' was used to position it perfectly in the middle.
+ 'Vertical-align: middle' so that the <h> element is in the middle of the page vertically. */ 
+  
+  .h7{
+      font-family: 'Caveat', sans-serif;
+      font-size: 25px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+/* For each of the headings ('h1' to 'h10') have the font name 'Caveat' first because it was taken from an external source from Google fonts that was linked to the HTML document, however if the browser doesn't support the feature to use external sources for fonts, the backup plan is using 'sans-serif'.
+ The margin is set to 0 because by doing so it will allow the <h> element to be placed in the center of the container.
+ To aid the margin to center the <h> element, display of the element has been set to table-cell so it is centered in the middle of a group of cells that are made up on the page.
+ Font size is set to 25px here because it was a lot of text and if it was set to 100px, it would take up the whole page and not be clear.
+ Text is aligned to the center of the page via 'text-align:center', but it isn't perfectly in the middle, hence why margin was set to 0, and 'display:table-cell' was used to position it perfectly in the middle.
+ 'Vertical-align: middle' so that the <h> element is in the middle of the page vertically.
+ 'h7', 'h8', 'h9' and 'h10' are class elements for their headings (which in HTML are for tag <h6>), due to not being able to use more than 6 <h> elements, CSS was used to create a styling for the multiple <h6> tags to create seperate headings so that they do not end up being the same as the <h6> tags. */ 
+  
+  .h8{
+      font-family: 'Caveat', sans-serif;
+      font-size: 25px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+/* For each of the headings ('h1' to 'h10') have the font name 'Caveat' first because it was taken from an external source from Google fonts that was linked to the HTML document, however if the browser doesn't support the feature to use external sources for fonts, the backup plan is using 'sans-serif'.
+ The margin is set to 0 because by doing so it will allow the <h> element to be placed in the center of the container.
+ To aid the margin to center the <h> element, display of the element has been set to table-cell so it is centered in the middle of a group of cells that are made up on the page.
+ Font size is set to 25px here because it was a lot of text and if it was set to 100px, it would take up the whole page and not be clear.
+ Text is aligned to the center of the page via 'text-align:center', but it isn't perfectly in the middle, hence why margin was set to 0, and 'display:table-cell' was used to position it perfectly in the middle.
+ 'Vertical-align: middle' so that the <h> element is in the middle of the page vertically. */ 
+  
+  .h9{
+      font-family: 'Caveat', sans-serif;
+      font-size: 25px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+/* For each of the headings ('h1' to 'h10') have the font name 'Caveat' first because it was taken from an external source from Google fonts that was linked to the HTML document, however if the browser doesn't support the feature to use external sources for fonts, the backup plan is using 'sans-serif'.
+ The margin is set to 0 because by doing so it will allow the <h> element to be placed in the center of the container.
+ To aid the margin to center the <h> element, display of the element has been set to table-cell so it is centered in the middle of a group of cells that are made up on the page.
+ Font size is set to 25px here because it was a lot of text and if it was set to 100px, it would take up the whole page and not be clear.
+ Text is aligned to the center of the page via 'text-align:center', but it isn't perfectly in the middle, hence why margin was set to 0, and 'display:table-cell' was used to position it perfectly in the middle.
+ 'Vertical-align: middle' so that the <h> element is in the middle of the page vertically. */ 
+  
+  .h10{
+      font-family: 'Caveat', sans-serif;
+      font-size: 25px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+/* For each of the headings ('h1' to 'h10') have the font name 'Caveat' first because it was taken from an external source from Google fonts that was linked to the HTML document, however if the browser doesn't support the feature to use external sources for fonts, the backup plan is using 'sans-serif'.
+ The margin is set to 0 because by doing so it will allow the <h> element to be placed in the center of the container.
+ To aid the margin to center the <h> element, display of the element has been set to table-cell so it is centered in the middle of a group of cells that are made up on the page.
+ Font size is set to 25px here because it was a lot of text and if it was set to 100px, it would take up the whole page and not be clear.
+ Text is aligned to the center of the page via 'text-align:center', but it isn't perfectly in the middle, hence why margin was set to 0, and 'display:table-cell' was used to position it perfectly in the middle.
+ 'Vertical-align: middle' so that the <h> element is in the middle of the page vertically. */ 
+  
+  .image-fade{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150%;
+  }
+/* Display is set to block, so the images that have the 'image-fade' css name appear when the whole image has fully uploaded on the page when scrolling up or down. 
+ 'Margin-left' and 'margin-right' are set to auto that will help the element with the 'image-fade' class horizontally center itself on the page within its container.
+ Width is set to 50% so the image shows up half its size instead of the full 100% and covering the page and not being zoomed in on. */
+  
+  .time{
+    float: right;
+    margin-right: -200px;
+    font-family: 'Roboto Mono', sans-serif;
+  }
+/* The elements with the class 'time' will have the font name 'Roboto Mono' first because it was taken from an external source from Google fonts that was linked to the HTML document, however if the browser doesn't support the feature to use external sources for fonts, the backup plan is using 'sans-serif'.
+ The element will be located to the right side of the page and 'margin-right' was used to help 'float:right' by pushing it away from its neighbor (the image) by 25 pixels.
+ Margin-right was set to -200px to bring the time text back a few steps to sit at the right side of the screen on the right hand side (from the users persepctive of holding their phone) of the phone.*/
+  
+
+  .tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+  }
+/* Opacity is set to 0 meaning it is fully transparent, which means that it will be invisible.
+ 'Transform: translate enables the elements with the class name 'tag' be positioned up or down the page, in this case it's at the upper half of the page by having positive values for its vertical height.
+ Transition being set to 1s means that it takes 1 second for the animation to occur of it appearing and disappearing when scrolling on the page. */
+
+  .tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+/* Opacity is set to 1 meaning it is translucent, in other words the stuff behind it can be seen.
+  Transform properties have been set to 'translate(0,0)' so that the position doesn't change even if the object (in this case the time) changes. */    
+
+  .parent{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+/* The parent element is a container for its child element (the <div> inside of the parent <div>), and this is on the <div> that has the ghost image placed in it.
+ The elements position is set to relative meaning it is positioned to where it would normally be positioned but as the top and left have been set to 0, it will be slightly moved away from its normal position. Which means the ghost image will be positioned slightly away from where person image would be. */
+  
+  #img1 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 55px;
+  left: 60%;
+  transform: translateX(-50%);
+  z-index: 1;
+  }
+/* These settings are for the parent <div> elements of the ghost images to help it move into its position above the image underneath it, this is done with 'z-index' to put it overlapping the other image in the other <div>.
+ The image is translated -50% allowing it to get closer to the left of the image underneath it. 
+ Width and height is set equally to 400px so they are both the same and won't have any issues when being moved around on the page.
+ 'Position:absolute' makes the element with the 'img1' id name not take any position like how it would do with realtive or static positioning other than its own.
+ The positioning of the ghosts image on the mobile device is different to the settings on the tablet and desktop screen settings, because with the 'person seeing ghosts' image getting expanded on mobile device screens, the ghosts needed to be moved so they were on top of the 'person seeing ghosts' image and matched the position the ghosts image are in when viewing the interactive story on tablet and/ or desktop devices. */
+  
+  #img2 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -40px;
+  left: 65%;
+  transform: translateX(-50%);
+  z-index: 1;
+  }
+/* The settings for this class is the same as the one above, the only different is the positioning of 'top' and 'left' because of where the ghosts were needed to be positioned above the person image beneath it.
+   As with the ghosts image before, the positioning of the ghosts image on the mobile device is different here as well compared to the settings on the tablet and desktop screen settings, because with the 'person seeing ghosts' image getting expanded on mobile device screens, the ghosts needed to be moved so they were on top of the 'person seeing ghosts' image and matched the position the ghosts image are in when viewing the interactive story on tablet and/ or desktop devices. */    
+
+  .person{
+    width: 110%;
+    margin: 30px;
+  }
+/* The elements with the class name 'person' are set to 50% its width, and is set to 50% because 100% would make the image too big, so by cutting it in half the image perfectly fits in the center of the page at a reasonable size. 
+   The images of the person were all enlarged to fit the screen size as the original size was too small when it loaded up on the device screen. 
+   Margin was added to create space around the images and the side of the phone screen so the images weren't stuck next to the side of the screen. */
+  
+  .image1{
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+  width: 400px;
+  }
+/* This class element has a 'top' and 'left' of 0 with 'position: relative' which gives it a different position from its parent element <div>.
+   The cursor is set to 'pointer' so that it shows the user the ghosts are clickable.
+   Set to '1' with 'z-index' so it overlays the person image beneath it and has a width of 400px so it can take up some space to cover the image beneath it. */
+  
+  .image2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+  width: 400px;
+  }
+/* This class element has a 'top' and 'left' of 0 with 'position: absolute' which gives it a position close to its parent element <div>.
+   The cursor is set to 'pointer' so that it shows the user the ghosts are clickable.
+   Set to '1' with 'z-index' so it overlays the person image beneath it and has a width of 400px so it can take up some space to cover the image beneath it. */
+  
+/* CSS settings for the review box. */    
+  body {
+    width: 100vw;
+    background-color: black;
+    font-family: sans-serif;
+  }
+/* 'vw' stands for viewpoint width which will make the pages fonts or heading fit on the screen without any problems, and if the viewport changes, the browser will adjust it if needed automatically.
+   The 'font-family'  was set to 'sans-serif' because of it not needing to be complicated and took a simple appraoch with it.
+   The 'background colour' of the review box was set to black too, to match the story background colour. */
+  
+  .review-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+/* The container of the review box was set to have a vertical height of 100 so it fit the page vertically in the center and was aligned by 'justify-content: center' and 'align-items: center'. 
+ Width of the review box was set to 100% so it takes as much space needed, also so the user can see their answer and it doesn't get cut off if the box is too small.
+ 'Display: flex' is used to align the box in rows automatically. */
+
+  
+  .review{
+    font-size: 60px;
+    color: white;
+  }
+/* The colour of the review boxes were made white so they stand out from the background and the colour was changed by the 'color' tag.
+   The font size was made 60px so that it fits on screen and doesn't go off the page making the user zoom out from their page to read the text. */
+  
+  .form-control {
+    display: block;
+    width: 300px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid grey;
+  }
+/* 'Display:block' is used for the text boxes to create a new line with space above and below it that has nothing near it. 
+   Width is set to 670px for mobile because it varies on the phone size and would need to be wider because the screens on desktop and tablet are far wider, so they'd have smaller values for the width, meaning when it loads on a mobile phone it will look small. Therefore, 670px has been chosen as the width for the text box on mobile. 
+   'Margin' has 10px 0 because it has 10px 0 to it because it creates 10px worth of space around it and nothing to the left, not on the right.
+   'Padding' creates 10px worth of space within the borders of the element.
+   2px worth of grey has been added as a border for the text boxes.
+   The width of the submission/ form box was cut to 200px so that it takes up a reasonable amount of space on the users mobile device, becuase if it was too big, the user would have to zoom out from the page which would not give them customer satisfaction. */    
+
+  
+  button {
+    display: flex;
+    background-color: #172432;
+    border: none;
+    color: #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+  }
+/* The button element has its font colour set with 'color' and the colour of the button set with 'background-color'.
+ There was no border needed, so 'border: none' was put in.
+ 'Cursor' was set to pointer to show users that the button is clickable if they thought it wasn't.
+ 'Display: flex' automatically generates a width and height for the element arranging it in a column.
+ 'Padding was added so it creates space around the button so it isn't too close to the text boxes. 
+ 'Text-align' is used to center the button in the middle under the text boxes, and is assissted in doing this by 'margin' being set to auto as it horizontally centers an element inside of its container. */
+  
+/* CSS for star rating system. */
+  .rating {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  }
+/* 'Display: flex' is used here to arrange the items within this class container in a row.
+ 'Padding' is set to 0 so that there is no space being made within the elements in the container. 
+ 'Justify-content: center' is used to put the elements within the container in the center and as 'display: flex' has been used, they are in a row  in the center of the container. */
+  
+  .rating li {
+  list-style-type: none
+  }
+/* 'List-style-type: none' tells the browser that no markers are needed for the list.
+  What this css element does is add bullet points, but as the star rating system doesn't need any because the rating is done by highlighting the stars, none has been chosen. */ 
+  
+  .rating-item {
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-size:2em;
+  color: yellow;
+  }
+/* A border was needed to be around the star ratings so it differintiates itself from the background and survery box, so border was set with a solid white outline that has a value of 1px.
+ To notify the user that the stars are clickable, when they hover it the cursor will change to a pointer done with 'cursor: pointer'.
+ Font-size was set to 2 because it was a reasonable size for the stars.
+ The colour of the stars was set to yellow because it's basica and doesn't need to be a flashy gold colour. */    
+  
+/* initial: make all stars full */
+  .rating-item::before {
+  content: "\2605";
+  }
+  
+/* make until the clicked star (the rest) empty */
+  .rating-item.active ~ .rating-item::before {
+  content: "\2606";
+  }
+  
+/* on hover make all full */
+  .rating:hover .rating-item::before {
+  content: "\2605";
+  }   
+
+/* make until the hovered (the rest) empty */
+  .rating-item:hover ~ .rating-item::before {
+  content: "\2606";
+  }
+  }
+  
+/* Tablet screen page settings for viewing the interactive story. */
+  @media screen and (min-width: 480px) {
+  /* this is the css used to keep the play/ pause button at the top left hand of the page and scrolls down the page and up the page as the user scrolls. */  
+  .topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+  }
+  
+  .element{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  /* play/ pause button box */  
+  .btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* colour for the play/ pause button */
+  .success {
+    border-color: black;
+    color: black;
+  }  
+  
+  * {box-sizing: border-box;}
+  
+  /* input for the arrow in the text box */
+  .arrow:before {
+    content: "←";
+    font-size: 25px;
+  }
+  
+  /* Style Alert Message */
+  .pop-up {
+    position: fixed;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: opacity .6s linear;
+    float: left;
+    margin-left: 100px;
+    z-index: 1000;
+  }
+  
+  /* Contextual Classes for alert */
+  .pop-up-colour {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+  }
+  
+  /* Style Close Button */
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: 900;
+    background-color: transparent;
+    border: 0;
+  }
+  
+  body{
+      margin: 0;
+      padding: 0;
+  }
+  
+  /* background image settings for the page */
+  .box1{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box2{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box3{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box4{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box5{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box6{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box7{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box8{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box9{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box10{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  /* heading text font, colour and size settings */
+  h1{
+      font-family: 'Julee', sans-serif;
+      font-size: 100px;
+      color: white;
+      padding: 125px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  /* There was padding added to the title of the interactive story so that the text wasn't stuck next to the side of the phone, and was in the middle of the users screen on their tablet device. */
+  
+  h2{
+      font-family: 'Caveat', sans-serif;
+      font-size: 50px;
+      color: white;
+      margin: 0px;
+      padding: 100px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  h3{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  h4{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  h5{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  h6{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .h7{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .h8{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .h9{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .h10{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .image-fade{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120%;
+  }
+  /* Like in the mobile phone screen device settings, the images with the class 'image-fade' were enlargened using 'width:120px' so they weren't small as tablet screens are bigger than mobile phone screens. */
+  
+  .time{
+    float: right;
+    margin-right: -100px;
+    font-family: 'Roboto Mono', sans-serif;
+  }
+  /* The time was pushed to the right side of the users screen with 'margin-right' by using a negative value to push it backwards, because if a positive value was used, it would come forwards. */
+  
+  /* elements that change the visibility of the content on the page when scrolling */
+  .tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+  }
+  .tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+  /* Image settings for ghost and person */
+  .parent{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Settings to move the ghosts above image 5 on top of it. */
+  #img1 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 120px;
+  left: 45%;
+  transform: translateX(-50%);
+  z-index: 1;
+  }
+  /* Like in the settings for the mobile phone screen devices, the ghosts were repositioned for the tablet screen devices as the image expansion meant that the ghosts needed to be repositioned to match the position they are in on the desktop screen devices. */
+  
+  /* Settings to move the ghosts above image 7(6) on top of it. */
+  #img2 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 10px;
+  left: 55%;
+  transform: translateX(-50%);
+  z-index: 1;
+  }
+  /* Like in the settings for the mobile phone screen devices, the ghosts were repositioned for the tablet screen devices as the image expansion meant that the ghosts needed to be repositioned to match the position they are in on the desktop screen devices. */
+
+  .person{
+    width: 100%;
+    margin-right: -20px;
+  }
+  /* The image was moved away from the side of the phone screen with the use of 'margin-right' so it was showing the full image size from height to width and not seem like part of it was being cut off. */
+  
+  .image1{
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+  width: 400px;
+  }
+  
+  .image2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+  width: 400px;
+  }
+  }
+  
+  /* CSS settings for the review submission box. */    
+  body {
+    width: 100vw;
+    background-color: black;
+    font-family: sans-serif;
+  }
+  
+  .review-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .review{
+    color: white;
+  }
+  
+  .form-control {
+    display: block;
+    width: 670px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid grey;
+  }
+  
+  button {
+    display: flex;
+    background-color: #172432;
+    border: none;
+    color: #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+  }
+  
+  /* CSS for star rating system. */
+  .rating {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  }
+  
+  .rating li {
+  list-style-type: none
+  }
+  
+  .rating-item {
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-size:2em;
+  color: yellow;
+  }
+  
+  /* initial: make all stars full */
+  .rating-item::before {
+  content: "\2605";
+  }
+  
+  /* make until the clicked star (the rest) empty */
+  .rating-item.active ~ .rating-item::before {
+  content: "\2606";
+  }
+  
+  /* on hover make all full */
+  .rating:hover .rating-item::before {
+  content: "\2605";
+  }
+  
+  /* make until the hovered (the rest) empty */
+  .rating-item:hover ~ .rating-item::before {
+  content: "\2606";
+  }  
+  
+  
+/* Desktop screen page settings for viewing the interactive story. */
+  @media screen and (min-width: 1025px) {
+  .topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+  }
+  /* This is the css used to keep the play/ pause button at the top left hand of the page and scrolls down the page and up the page as the user scrolls. */  
+  
+  .element{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  /* play/ pause button box */  
+  .btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  /* The cursor property is set to pointer so that when the user hovers over an object on the page that is clickable, it will have a pointy finger cursor over it instead of an arrow cursor.
+     This is so that the user knows that the object being hovered over is clickable.
+     This feature only works for desktops as mobile phones and tablets are touch screen and don't have a mouse feature. */
+  
+  /* colour for the play/ pause button */
+  .success {
+    border-color: black;
+    color: black;
+  }  
+  
+  * {box-sizing: border-box;}
+  
+  /* input for the arrow in the text box */
+  .arrow:before {
+    content: "←";
+    font-size: 25px;
+  }
+  
+  /* Style Alert Message */
+  .pop-up {
+    position: fixed;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: opacity .6s linear;
+    float: left;
+    margin-left: 100px;
+    z-index: 1000;
+  }
+  
+  /* Contextual Classes for alert */
+  .pop-up-colour {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+  }
+  
+  /* Style Close Button */
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: 900;
+    background-color: transparent;
+    border: 0;
+  }
+  
+  body{
+      margin: 0;
+      padding: 0;
+  }
+  /* The body is given a margin and padding of 0 so that the body of the webpage doesn't muddle up its CSS properties with another CSS property. */
+  
+  /* background image settings for the page */
+  .box1{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box2{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box3{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box4{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box5{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box6{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box7{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box8{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box9{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  .box10{
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      display: table;
+      background-attachment: fixed;
+  }
+  
+  /* heading text font, colour and size settings */
+  h1{
+      font-family: 'Julee', sans-serif;
+      font-size: 100px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  h2{
+      font-family: 'Caveat', sans-serif;
+      font-size: 40px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  h3{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  h4{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  h5{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  h6{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .h7{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .h8{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .h9{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .h10{
+      font-family: 'Caveat', sans-serif;
+      font-size: 48px;
+      color: white;
+      margin: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .image-fade{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  .time{
+    float: right;
+    margin-right: 25px;
+    font-family: 'Roboto Mono', sans-serif;
+  }
+  
+  /* elements that change the visibility of the content on the page when scrolling */
+  .tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+  }
+  .tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+  /* Image settings for ghost and person */
+  .parent{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Settings to move the ghosts above image 5 on top of it. */
+  #img1 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 60px;
+  left: 35%;
+  transform: translateX(-50%);
+  z-index: 1;
+  }
+  
+  /* Settings to move the ghosts above image 7(6) on top of it. */
+  #img2 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 10px;
+  left: 42.5%;
+  transform: translateX(-50%);
+  z-index: 1;
+  }
+
+  .person{
+    width: 50%;
+  }
+  
+  .image1{
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+  width: 400px;
+  }
+  
+  .image2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+  width: 400px;
+  }
+  }
+  /* The settings for all the images and font sizes of all the text are bigger on desktop screens because of desktop platforms having the biggest screen size in terms of width, but not only that, but to make the content
+     more viewable to the user. This is important for user satisfaction, because by the content being clear and readable it means they can interact with it more such as typing in the review box, clicking on the ghosts and 
+     being more comfortable with scrolling between the images. */
+  
+  /* CSS settings for the review submission box. */    
+  body {
+    width: 100vw;
+    background-color: black;
+    font-family: sans-serif;
+  }
+  
+  .review-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .review{
+    font-size: 100px;
+    color: white;
+  }
+  
+  .form-control {
+    display: block;
+    width: 1000px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid grey;
+  }
+  /* The width of the review box/ submission form is biggest on desktop screens because desktop screens are wider than both mobile phone and tablet devices, so width is set to 1000px to have a wider scale. */
+  
+  button {
+    display: flex;
+    background-color: #172432;
+    border: none;
+    color: #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+  }
+  
+  /* CSS for star rating system. */
+  .rating {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  }
+  
+  .rating li {
+  list-style-type: none
+  }
+  
+  .rating-item {
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-size:2em;
+  color: yellow;
+  }
+  
+  /* initial: make all stars full */
+  .rating-item::before {
+  content: "\2605";
+  }
+  
+  /* make until the clicked star (the rest) empty */
+  .rating-item.active ~ .rating-item::before {
+  content: "\2606";
+  }
+  
+  /* on hover make all full */
+  .rating:hover .rating-item::before {
+  content: "\2605";
+  }
+  
+  /* make until the hovered (the rest) empty */
+  .rating-item:hover ~ .rating-item::before {
+  content: "\2606";
+  }
